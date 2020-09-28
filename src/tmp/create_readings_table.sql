@@ -1,0 +1,11 @@
+
+CREATE TABLE readings (
+    id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255),
+    creator VARCHAR(100),
+    situation VARCHAR(10),
+    points INTEGER,
+    impression VARCHAR(1000),
+    create_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+) DEFAULT CHARACTER SET=utf8mb4;
+
