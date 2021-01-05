@@ -1,5 +1,5 @@
 <!-- ユーザーアカウント情報-->
-<header class='navbar  p-3 mb-5 text-dark '>
+<header class='navbar  p-3 mb-5 text-dark bg-light'>
   <div style='margin-top: 60px;'>
     <section class='card-deck  pb-4'>
       <div class='card border-0 d-flex  align-items-end justify-content-center'>
