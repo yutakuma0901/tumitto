@@ -24,7 +24,36 @@
             </div>
           </div>
           <div class="col-md-6 d-none d-md-block">
-            <img src="img/whiteboard-5ee4dc4b4b_640.jpg" class="img-fluid rounded position-relative" alt="..." width="100%">
+            <!-- <img src="img/whiteboard-5ee4dc4b4b_640.jpg" class="img-fluid rounded position-relative" alt="..." width="100%"> -->
+
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <img src=" img/pexels-pixabay-40751.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                          <img src=" img/pexels-jonathan-borba-3076516.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                          <img src="img/pexels-ella-olsson-1640777.jpg" class="d-block w-100" alt="...">
+                      </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                  </a>
+              </div>
+
+
           </div>
           <!-- 小 -->
           <div class="d-block d-md-none">

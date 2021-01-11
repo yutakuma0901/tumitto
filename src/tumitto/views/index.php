@@ -1,5 +1,5 @@
 <!-- ユーザーアカウント情報-->
-<header class='navbar  p-3 mb-5 text-dark bg-light'>
+<header class='navbar  p-3 mb-5 text-dark '>
   <div style='margin-top: 60px;'>
     <section class='card-deck  pb-4'>
       <div class='card border-0 d-flex  align-items-end justify-content-center'>
@@ -25,7 +25,7 @@
 
 <main>
   <!-- スライダー -->
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -50,7 +50,7 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
-  </div>
+  </div> -->
 
 
   <!-- 積み上げバー-->
