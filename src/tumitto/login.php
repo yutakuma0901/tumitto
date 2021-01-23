@@ -15,7 +15,7 @@ if(!empty($_POST)) {
         $login->execute(array($_POST['email'], sha1($_POST['password'])));
         $user = $login->fetch();
         if($user) {
-            $_SESSION['id'] = $user['id'];
+            $_SESSION['login_id'] = $user['login_id'];
             $_SESSION['time'] = time();
 
             if ($_POST['save'] === 'on') {

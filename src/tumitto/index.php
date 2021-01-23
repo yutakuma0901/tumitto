@@ -6,15 +6,16 @@ $title = 'ダイエットホームページ';
 
 session_start();
 
-if(isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
-    $_SESSION['time'] = time();
+$user = getLoginUser($db);
+// if(isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
+//     $_SESSION['time'] = time();
 
-    $users = $db->prepare('SELECT * FROM users WHERE id=?');
-    $users->execute(array($_SESSION['id']));
-    $user = $users->fetch();
-} else {
-    header('Location: login.php');
-    exit();
-}
+//     $users = $db->prepare('SELECT * FROM users WHERE id=?');
+//     $users->execute(array($_SESSION['id']));
+//     $user = $users->fetch();
+// } else {
+//     header('Location: login.php');
+//     exit();
+// }
 
 include __DIR__ . "/views/layout.php";

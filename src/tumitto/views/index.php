@@ -15,7 +15,7 @@
         <p class='card-title h4'><?= escape($user['name']) ?>のダイエットルーム</p>
         <br>
         <p class="card-title h5"><?= escape($user['name']); ?>さん</p>
-
+        <hr>
 
       </div>
     </section>

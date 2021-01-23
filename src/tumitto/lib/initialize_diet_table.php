@@ -15,12 +15,20 @@ function dropTableDiets($db) {
     echo '削除が完了しました' . PHP_EOL;
 }
 
+function dropTablePosts($db) {
+    $droptablesql = "DROP TABLE posts";
+    $stmt = $db->query($droptablesql);
+
+    echo '削除が完了しました' . PHP_EOL;
+}
+
 
 
 function createDietsTable($db) {
     $dietssql = <<<EOT
 CREATE TABLE diets (
     id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_id INTEGER,
     aerobicexercise INTEGER,
     muscletraining INTEGER,
     meal VARCHAR(1000),
@@ -39,7 +47,7 @@ function createUsersTable($db)
 {
     $usersql = <<<EOT
 CREATE TABLE users (
-    id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    login_id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255),
     email VARCHAR(255),
     password VARCHAR(100),
@@ -58,9 +66,9 @@ function createPostsTable($db)
 {
     $postsql = <<<EOT
 CREATE TABLE posts (
-    id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    post_id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
     message TEXT,
-    user_id INTEGER,
+    post_user_id INTEGER,
     reply_message_id INTEGER,
     created DATETIME ,
     modified TIMESTAMP
@@ -72,9 +80,13 @@ EOT;
     echo '登録が完了しました';
 }
 
+
+
 //dropTableDiets($db);
-dropTableUsers($db);
+//dropTableUsers($db);
+//dropTablePosts($db);
 
 //createDietsTable($db);
-createUsersTable($db);
+//createUsersTable($db);
 //createPostsTable($db);
+//saveDbPostData($db,$user);

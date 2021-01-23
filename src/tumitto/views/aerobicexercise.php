@@ -2,9 +2,13 @@
 
 <article>
   <?php while ($diet = $diets->fetch()) : ?>
-    <p><a href="aerobicexercise.query.php?id=<?php print($diet['id']); ?>"><?php print(mb_substr($diet['aerobicexercise'], 0, 50)); ?>分</a></p>
-    <time><?php print($diet['create_at']) ?></time>
-    <hr>
+    <div>
+      <img src="img/user_image/<?= escape($diet['image']); ?>" width="48" height="48" alt="" style="background-position: center center;border-radius: 100%;object-fit:cover;">
+      <name style=""><?php print($diet['name']); ?></name>
+      <p><a href="aerobicexercise.query.php?id=<?php print($diet['id']);?>" style="font-size: 20px;"><?php print($diet['aerobicexercise']) ; ?>分</a></p>
+      <time><?php print($diet['create_at']) ?></time>
+      <hr>
+    </div>
   <?php endwhile; ?>
   <?php if ($page >= 2) : ?>
     <a href="aerobicexercise.php?page=<?php print($page - 1); ?>"><?php print($page - 1); ?>ページ目へ</a>
@@ -20,10 +24,4 @@
   <?php endif; ?>
 </article>
 
-<!-- 手続き型 -->
-<!-- <section>
-      <?php foreach ($diets as $diet) : ?>
-        <h2><?php echo Escape($diet['create_at']) ?>&nbsp;&nbsp;||&nbsp;&nbsp;<?php echo Escape($diet['aerobicexercise']) ?>分</h2>
-      <?php endforeach; ?>
-    </section> -->
 <p><a href="index.php">ダイエットホームへ</a></p>

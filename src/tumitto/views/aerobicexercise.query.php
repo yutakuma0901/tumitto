@@ -1,23 +1,27 @@
 <!-- ランニング詳細ページ（クエリパラメーター）-->
 <h2>ランニング詳細ページ</h2>
 <?php
-$id = $_REQUEST['id'];
-if (!is_numeric($id) || $id <= 0) {
-  print('1以上の数字で入力してください');
-  exit();
-}
 
-$diets = $db->prepare('SELECT aerobicexercise, id FROM diets WHERE id=?');
-$diets->execute(array($id));
-$diet = $diets->fetch();
+
 ?>
 <article>
-    <pre><?php print($diet['aerobicexercise']); ?>分</pre>
+
+  <img src="img/user_image/<?= escape($diet['image']); ?>" width="48" height="48" alt="" style="background-position: center center;border-radius: 100%;object-fit:cover;">
+  <name style=""><?php print($diet['name']); ?></name>
+  <p><a href="aerobicexercise.query.php?id=<?php print($diet['id']); ?>" style="font-size: 20px;"><?php print(mb_substr($diet['aerobicexercise'], 0, 50)); ?>分</a></p>
+  <time><?php print($diet['create_at']) ?></time>
+  <hr>
+
 </article>
 
-
+<a href="aerobicexercise.reply.php?id=<?php print($diet['id']); ?>">返信する</a>
+｜
 <a href="aerobicexercise.update.php?id=<?php print($diet['id']); ?>">編集する</a>
 ｜
 <a href="delete.php?id=<?php print($diet['id']); ?>">この日のトレーニング全て削除する</a>
 ｜
 <a href="aerobicexercise.php">戻る</a>
+
+<article>
+    
+</article>

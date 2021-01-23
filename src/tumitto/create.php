@@ -1,10 +1,15 @@
 <?php
 require __DIR__ . '/lib/mysqli.php';
+//require __DIR__ . "/index.php";
+session_start();
+$user = getLoginUser($db);
 
 
 //オブジェクト型mysql
-function saveDbPostData($db)
+function saveDbDietsData($db,$user)
 {
+    $user = $_SESSION['login_id'];
+    // $user = $user['user_id'];
     $aerobicexercise = $_POST['aerobicexercise'];
     $muscletraining = $_POST['muscletraining'];
     $meal = $_POST['meal'];
@@ -12,22 +17,27 @@ function saveDbPostData($db)
 
     $sql = <<<EOT
 INSERT INTO diets (
+    user_id,
     aerobicexercise,
     muscletraining,
     meal,
-    sleep
-)VALUES (
+    sleep,
+    create_at
+) VALUES(
+    :user_id,
     :aerobicexercise,
     :muscletraining,
     :meal,
-    :sleep
+    :sleep,
+    NOW()
 )
 EOT;
 
     $stmt = $db->prepare($sql);
-    $params = array(':aerobicexercise' => $aerobicexercise, ':muscletraining' => $muscletraining, ':meal' => $meal, ':sleep' => $sleep);
+    $params = array(':user_id'=>$user, ':aerobicexercise'=>$aerobicexercise, ':muscletraining'=> $muscletraining, ':meal'=> $meal, ':sleep'=> $sleep);
     $stmt->execute($params);
     echo '登録が完了しました';
+    return $user;
 }
 
 function Validation($diets)
@@ -75,8 +85,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     //成功した場合
     if (!count($errors))
     {
+        //ユーザ情報をセッションする
+        $user = getLoginUser($db);
         //ダイエットテーブルを作る。（）
-        saveDbPostData($db);
+        saveDbDietsData($db,$user);
         //ページをきょうせいてきに移動する
         header("Location: index.php");
     }
