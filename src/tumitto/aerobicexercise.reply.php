@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 
   // }
   //ダイエットテーブルを作る。（）
-  saveDbPostData($db,$user);
+  saveDbPostData($db,$user,$replyid);
 
   //aerobicexercise.query.php?id=<?php print($diet['id']);
   header(sprintf("Location: aerobicexercise.query.php?id=%s", urlencode($diet['id'])));

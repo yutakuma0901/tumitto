@@ -67,6 +67,8 @@ function createPostsTable($db)
     $postsql = <<<EOT
 CREATE TABLE posts (
     post_id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    post_image VARCHAR(255),
+    post_name VARCHAR(255),
     message TEXT,
     post_user_id INTEGER,
     reply_message_id INTEGER,
@@ -79,6 +81,26 @@ EOT;
 
     echo '登録が完了しました';
 }
+
+function getCountDiets($db)
+{
+    $getcountdiets = $db->prepare('SELECT COUNT(d.id),d.*,u.* FROM diets d, users u WHERE d.user_id=u.login_id ');
+    // $diets->bindParam(':login_user_id',(int)$user['id'], PDO::PARAM_INT);
+    $getcountdiets->execute();
+    $getcountdiet = $getcountdiets->fetch();
+    var_dump($getcountdiet);
+    return $getcountdiet;
+}
+function getCountUsers($db)
+{
+    $getcountusers = $db->prepare('SELECT COUNT(u.login_id),d.*,u.* FROM diets d, users u WHERE d.user_id=u.login_id ');
+    // $diets->bindParam(':login_user_id',(int)$user['id'], PDO::PARAM_INT);
+    $getcountusers->execute();
+    $getcountuser = $getcountusers->fetch();
+    var_dump($getcountuser);
+    return $getcountuser;
+}
+//getCountDiets($db);
 
 
 

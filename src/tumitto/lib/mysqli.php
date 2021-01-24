@@ -67,23 +67,30 @@ function getLoginUser($db)
     return $user;
 }
 
-function saveDbPostData($db,$user)
+function saveDbPostData($db,$user,$replyid)
 {
     $postid = $_POST['post_id'];
+    $postimage = $user['image'];
+    $postname = $user['name'];
     $message = $_POST['message'];
     $user = $_SESSION['login_id'];
     //$postuserid = $_POST['post_user_id'];
-    $replymessageid = $_POST['reply_message_id'];
+    // $replyid = $_REQUEST['id'];
+    $replyid = $_REQUEST['id'];
 
     $sql = <<<EOT
 INSERT INTO posts (
     post_id,
+    post_image,
+    post_name,
     message,
     post_user_id,
     reply_message_id,
     created
 ) VALUES(
     :post_id,
+    :post_image,
+    :post_name,
     :message,
     :post_user_id,
     :reply_message_id,
@@ -92,12 +99,28 @@ INSERT INTO posts (
 EOT;
 
     $posts = $db->prepare($sql);
-    $params = array(':post_id' => $postid, ':message' => $message, ':post_user_id' => $user, ':reply_message_id' => $replymessageid);
+    $params = array(':post_id' => $postid, ':post_image'=>$postimage, ':post_name'=>$postname, ':message' => $message, ':post_user_id' => $user, ':reply_message_id' => $replyid);
     $posts->execute($params);
     echo '登録が完了しました';
-
-    return $user;
+    return $user . $replyid;
 }
 
+function getCountDiets($db)
+{
+    $getcountdiets = $db->prepare('SELECT COUNT(d.id),d.*,u.* FROM diets d, users u WHERE d.user_id=u.login_id ');
+    // $diets->bindParam(':login_user_id',(int)$user['id'], PDO::PARAM_INT);
+    $getcountdiets->execute();
+    $getcountdiet = $getcountdiets->fetch();
 
+    return $getcountdiet;
+}
+
+function getCountUsers($db)
+{
+    $getcountusers = $db->prepare('SELECT COUNT(*) FROM  users ');
+    // $diets->bindParam(':login_user_id',(int)$user['id'], PDO::PARAM_INT);
+    $getcountusers->execute();
+    $getcountuser = $getcountusers->fetch();
+    return $getcountuser;
+}
 //}

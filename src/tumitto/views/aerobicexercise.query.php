@@ -21,7 +21,13 @@
 <a href="delete.php?id=<?php print($diet['id']); ?>">この日のトレーニング全て削除する</a>
 ｜
 <a href="aerobicexercise.php">戻る</a>
-
-<article>
-    
+<!-- 返信メッセージ -->
+<article style="margin-left: 30px; margin-top: 20px;">
+  <?php while ($post = $posts->fetch()) : ?>-->
+  <img src="img/user_image/<?= escape($post['post_image']); ?>" width="48" height="48" alt="" style="background-position: center center;border-radius: 100%;object-fit:cover;">
+  <name style="margin-left: 10px;"><?php print($post['post_name']); ?></name>
+  <p style="font-size: 20px; margin: 10px 0 0 10px;"><?php print(mb_substr($post['message'], 0, 50)); ?></p>
+  <time style="margin-left: 20px; color: darkgray;"><?php print($post['created']) ?></time>
+  <hr>
+<?php endwhile; ?>
 </article>

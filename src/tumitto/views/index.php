@@ -1,5 +1,5 @@
 <!-- ユーザーアカウント情報-->
-<header class='navbar  p-3 mb-5 text-dark '>
+<header>
   <div style='margin-top: 60px;'>
     <section class='card-deck  pb-4'>
       <div class='card border-0 d-flex  align-items-end justify-content-center'>
@@ -15,10 +15,46 @@
         <p class='card-title h4'><?= escape($user['name']) ?>のダイエットルーム</p>
         <br>
         <p class="card-title h5"><?= escape($user['name']); ?>さん</p>
-        <hr>
-
       </div>
     </section>
+    <section>
+      <div class="d-flex align-items-center justify-content-center mb-4" style="height: 60px; vertical-align: middle;">
+        <div class="navbar-expand">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <p class="small">ユーザー登録数</p>
+              <p><?= $getcountuser; ?></p>
+            </li>
+            <li class="nav-item ml-4">
+              <p class="small">総積み上げ回数</p>
+              <p><?= $getcountdiet; ?></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="d-flex align-items-center justify-content-center bg-light mb-4" style="height: 60px; vertical-align: middle;">
+        <div class="navbar-expand ">
+          <ul class="navbar-nav">
+            <li class="nav-item ml-1">
+              <a href="" class="btn btn-info btn-sm text-white small"><i class="fas fa-pen"></i>読み聞かせ記録</a>
+            </li>
+            <li class="nav-item ml-1">
+              <a href="" class="btn btn-secondary btn-sm text-white "><i class="fas fa-user-circle"></i>プロフィール</a>
+            </li>
+            <li class="nav-item ml-1">
+              <a href="" class="btn btn-secondary btn-sm text-white "><i class="fas fa-clock"></i>タイムライン</a>
+            </li>
+            <li class="nav-item ml-1">
+              <a href="" class="btn btn-secondary btn-sm text-white "><i class="fas fa-cog"></i>設定</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
   </div>
 </header>
 
@@ -72,54 +108,56 @@
   </div> -->
 
   <!-- コンテンツ部分-->
-  <a href="new.php">
-    <br>
-    <button type="button" class=" btn btn-outline-secondary mb-3">
-      <h3>積み上げを追加</h3>
-    </button>
-  </a>
-  <div class="row row-cols-1 row-cols-md-2" id="works">
-    <div class="col mb-4">
-      <div class="card">
-        <img src="img/pexels-pixabay-235922.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <a href="aerobicexercise.php">
-            <h5 class="card-title h4 text-dark mb-3">ランニング</h5>
-          </a>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  <div class="container">
+    <a href="new.php">
+      <br>
+      <button type="button" class=" btn btn-outline-secondary mb-3">
+        <h3>積み上げを追加</h3>
+      </button>
+    </a>
+    <div class="row row-cols-1 row-cols-md-2" id="works">
+      <div class="col mb-4">
+        <div class="card">
+          <img src="img/pexels-pixabay-235922.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a href="aerobicexercise.php">
+              <h5 class="card-title h4 text-dark mb-3">ランニング</h5>
+            </a>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col mb-4">
-      <div class="card">
-        <img src="img/pexels-ketut-subiyanto-4473608.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <a href="muscletraining.php">
-            <h5 class="card-title h4 text-dark mb-3">筋トレ</h5>
-          </a>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <div class="col mb-4">
+        <div class="card">
+          <img src="img/pexels-ketut-subiyanto-4473608.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a href="muscletraining.php">
+              <h5 class="card-title h4 text-dark mb-3">筋トレ</h5>
+            </a>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col mb-4">
-      <div class="card">
-        <img src="img/pexels-ella-olsson-1640774.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <a href=" meal.php">
-            <h5 class="card-title h4 text-dark mb-3">食事</h5>
-          </a>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+      <div class="col mb-4">
+        <div class="card">
+          <img src="img/pexels-ella-olsson-1640774.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a href=" meal.php">
+              <h5 class="card-title h4 text-dark mb-3">食事</h5>
+            </a>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col mb-4">
-      <div class="card">
-        <img src="img/pexels-ivan-oboleninov-935777.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <a href="sleep.php">
-            <h5 class="card-title h4 text-dark mb-3">睡眠</h5>
-          </a>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <div class="col mb-4">
+        <div class="card">
+          <img src="img/pexels-ivan-oboleninov-935777.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a href="sleep.php">
+              <h5 class="card-title h4 text-dark mb-3">睡眠</h5>
+            </a>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -142,7 +180,3 @@
     <button type="submit" class="btn btn-success">Submit</button>
   </form>
 </div>
-
-<!-- フッター -->
-<footer class="text-center bg-dark text-white">
-  <p class="py-3">Portfolio</p>

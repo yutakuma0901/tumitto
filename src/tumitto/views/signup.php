@@ -10,7 +10,7 @@
           <br>
           <dt>ニックネーム<span class="required">必須</span></dt>
           <dd>
-            <input type="text" name="name" size="35" maxlength="255" value="<?php echo (escape($users['name'])); ?>" />
+            <input type="text" name="name" size="35" maxlength="255" placeholder="例）ゆうさん" value="<?php echo (escape($users['name'])); ?>" />
             <?php if (isset($errors['name'])) : ?>
               <div class="text-danger">
                 <p class="error"><?= $errors['name'] ?></p>
@@ -19,7 +19,7 @@
           </dd>
           <dt>メールアドレス<span class="required">必須</span></dt>
           <dd>
-            <input type="text" name="email" size="35" maxlength="255" value="<?php echo (escape($users['email'])); ?>" />
+            <input type="text" name="email" size="35" maxlength="255" placeholder="" value="<?php echo (escape($users['email'])); ?>" />
             <?php if (isset($errors['email'])) : ?>
               <div class="text-danger">
                 <p class="error"><?= $errors['email'] ?></p>
@@ -28,7 +28,7 @@
           </dd>
           <dt>パスワード<span class="required">必須</span></dt>
           <dd>
-            <input type="password" name="password" size="10" maxlength="20" value="<?php echo (escape($users['password'])); ?>" />
+            <input type="password" name="password" size="35" maxlength="20" placeholder="8文字以上で入力" value="<?php echo (escape($users['password'])); ?>" />
             <?php if (isset($errors['password'])) : ?>
               <div class="text-danger">
                 <p class="error"><?= $errors['password'] ?></p>

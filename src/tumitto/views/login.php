@@ -24,7 +24,7 @@
           </dd>
           <dt>パスワード</dt>
           <dd>
-            <input type="password" name="password" size="35" maxlength="255" value="<?php echo escape((@$_POST['password'])); ?>" />
+            <input type="password" name="password" size="35" maxlength="255"  placeholder="10文字以上で入力" value="<?php echo escape((@$_POST['password'])); ?>" />
           </dd>
           <dt>ログイン情報の記録</dt>
           <dd>
