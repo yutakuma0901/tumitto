@@ -21,7 +21,6 @@ if(!empty($_POST)) {
             if ($_POST['save'] === 'on') {
                 setcookie('email', $_POST['email'], time()+60*60*24*14);
             }
-
             header('Location: index.php');
             exit();
         } else {

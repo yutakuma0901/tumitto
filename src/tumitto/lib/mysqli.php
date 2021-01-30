@@ -124,3 +124,12 @@ function getCountUsers($db)
     return $getcountuser;
 }
 //}
+function getCountDietsUser($db)
+{
+    $getcountdietsusers = $db->prepare('SELECT COUNT(d.id),d.*,u.* FROM diets d, users u WHERE d.user_id=u.login_id GROUP BY u.login_id ');
+    // $diets->bindParam(':login_user_id',(int)$user['id'], PDO::PARAM_INT);
+    $getcountdietsusers->execute();
+    $getcountdietuser = $getcountdietsusers->fetch();
+
+    return $getcountdietuser;
+}

@@ -24,6 +24,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ">
         <a class="nav-link text-light" href="home.index.php">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link text-light" href="logout.php">Logout</a>
         <a class="nav-link text-light" href="#skill">Skill</a>
         <a class="nav-link text-light" href="#works">Works</a>
         <a class="nav-link text-light" href="#contact">Contact</a>

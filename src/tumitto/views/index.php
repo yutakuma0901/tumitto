@@ -23,11 +23,15 @@
           <ul class="navbar-nav">
             <li class="nav-item">
               <p class="small">ユーザー登録数</p>
-              <p><?= $getcountuser; ?></p>
+              <p>　　　<?= $getcountuser; ?></p>
             </li>
             <li class="nav-item ml-4">
               <p class="small">総積み上げ回数</p>
-              <p><?= $getcountdiet; ?></p>
+              <p>　　　<?= $getcountdiet; ?></p>
+            </li>
+            <li class="nav-item ml-4">
+              <p class="small">あなたの積み上げ回数</p>
+              <p>　　　<?= $getcountdietuser; ?></p>
             </li>
           </ul>
         </div>
@@ -38,7 +42,7 @@
         <div class="navbar-expand ">
           <ul class="navbar-nav">
             <li class="nav-item ml-1">
-              <a href="" class="btn btn-info btn-sm text-white small"><i class="fas fa-pen"></i>読み聞かせ記録</a>
+              <a href="" class="btn btn-info btn-sm text-white small"><i class="fas fa-pen"></i>積み上げ記録</a>
             </li>
             <li class="nav-item ml-1">
               <a href="" class="btn btn-secondary btn-sm text-white "><i class="fas fa-user-circle"></i>プロフィール</a>
@@ -108,13 +112,14 @@
   </div> -->
 
   <!-- コンテンツ部分-->
-  <div class="container">
-    <a href="new.php">
-      <br>
-      <button type="button" class=" btn btn-outline-secondary mb-3">
-        <h3>積み上げを追加</h3>
-      </button>
-    </a>
+  <div class="container ">
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="new.php">
+          <button type="button" class="btn btn-outline-secondary mb-3" style="width: 100%;">
+            <h3>積み上げを追加</h3>
+          </button>
+        </a>
+    </div>
     <div class="row row-cols-1 row-cols-md-2" id="works">
       <div class="col mb-4">
         <div class="card">

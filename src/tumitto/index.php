@@ -5,8 +5,10 @@ $content = __DIR__ . "/views/index.php";
 $title = 'ダイエットホームページ';
 
 session_start();
-
 $user = getLoginUser($db);
+
 $getcountdiet = current(getCountDiets($db));
 $getcountuser = current(getCountUsers($db));
+$getcountdietuser = current(getCountDietsUser($db));
+
 include __DIR__ . "/views/layout.php";

@@ -24,7 +24,7 @@
           </dd>
           <dt>パスワード</dt>
           <dd>
-            <input type="password" name="password" size="35" maxlength="255"  placeholder="10文字以上で入力" value="<?php echo escape((@$_POST['password'])); ?>" />
+            <input type="password" name="password" size="35" maxlength="255" placeholder="10文字以上で入力" value="<?php echo escape((@$_POST['password'])); ?>" />
           </dd>
           <dt>ログイン情報の記録</dt>
           <dd>
@@ -38,6 +38,7 @@
         <br>
         <p>新規登録がまだの方はこちらからどうぞ。</p>
         <p>&raquo;<a href="signup.php">新規登録をする</a></p>
+        <p>&raquo;<a href="home.index.php">ホームページへ</a></p>
       </form>
     </div>
 

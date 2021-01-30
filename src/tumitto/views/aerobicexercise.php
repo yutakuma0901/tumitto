@@ -5,9 +5,10 @@
     <div>
       <img src="img/user_image/<?= escape($diet['image']); ?>" width="48" height="48" alt="" style="background-position: center center;border-radius: 100%;object-fit:cover;">
       <name style=""><?php print($diet['name']); ?></name>
-      <p><a href="aerobicexercise.query.php?id=<?php print($diet['id']);?>" style="font-size: 20px;"><?php print($diet['aerobicexercise']) ; ?>分</a></p>
+      <p><a href="aerobicexercise.query.php?id=<?php print($diet['id']); ?>" style="font-size: 20px;"><?php print($diet['aerobicexercise']); ?>分</a></p>
       <time><?php print($diet['create_at']) ?></time>
       <hr>
+
     </div>
   <?php endwhile; ?>
   <?php if ($page >= 2) : ?>

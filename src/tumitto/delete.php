@@ -3,11 +3,11 @@
 require __DIR__ . "/lib/mysqli.php";
 require __DIR__ . "/lib/escape.php";
 
-if(isset($_REQUEST['id']) && is_numeric($_REQUEST['id'])) {
-    $id = $_REQUEST['id'];
-    $statement = $db->prepare('DELETE  FROM diets WHERE id=? ');
-    $statement->execute(array($id));
-}
+    if(isset($_REQUEST['id']) && is_numeric($_REQUEST['id'])) {
+        $id = $_REQUEST['id'];
+        $diets = $db->prepare('DELETE  FROM diets WHERE id=? ');
+        $diets->execute(array($id));
+    }
 
 
 $title = "編集実行ページ";
