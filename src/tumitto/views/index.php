@@ -114,11 +114,11 @@
   <!-- コンテンツ部分-->
   <div class="container ">
     <div style="text-align: center; margin: 20px 0;">
-        <a href="new.php">
-          <button type="button" class="btn btn-outline-secondary mb-3" style="width: 100%;">
-            <h3>積み上げを追加</h3>
-          </button>
-        </a>
+      <a href="new.php">
+        <button type="button" class="btn btn-outline-secondary mb-3" style="width: 100%;">
+          <h3>積み上げを追加</h3>
+        </button>
+      </a>
     </div>
     <div class="row row-cols-1 row-cols-md-2" id="works">
       <div class="col mb-4">
@@ -170,4 +170,50 @@
 </main>
 
 
-<!-- 問合せフォーム -->
+<!-- 地図 -->
+<section id="location" class="container" style="padding: 4% 0;">
+  <div class="wrapper" style="display: flex; justify-content:space-between">
+    <div class="location-info" style="width: 35%; margin-left: 20px;">
+      <h3 class="sub-title">宮の沢JOYFIT</h3>
+      <hr>
+      <p style="padding: 12px 10px;">
+        住所：札幌市西区<br>
+        〇〇〇〇〇〇 000-22-1 <br>
+        〇〇〇〇<br>
+        電話：03-1111-1111 <br>
+        営業時間：10:00~20:00 <br>
+        休日：土日
+      </p>
+    </div>
+    <!--location-info-->
+    <div class="location-map" style="width: 74%;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2913.6908281950537!2d141.27595941547955!3d43.0899948791447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b286da5388a71%3A0x3151a356e6901b47!2zSk9ZRklUKOOCuOODp-OCpOODleOCo-ODg-ODiCkyNCDmnK3luYzlrq7jga7msqI!5e0!3m2!1sja!2sjp!4v1612081863297!5m2!1sja!2sjp" width="800" height="400" frameborder="0" style="border:0; width: 100%; margin-left: 20px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+  </div>
+  <!--wrapper-->
+</section>
+
+<!-- SNS -->
+<section id="sns" class="">
+  <div class="wrapper container">
+    <div class="sns-box">
+      <h3 class="sub-title" style="">Facebook</h3>
+      <hr>
+      プラグイン
+    </div>
+
+    <div class="sns-box">
+      <h3 class="sub-title">Twitter</h3>
+      <hr>
+      <a class="twitter-timeline" data-height="315" href="https://twitter.com/VbPgFtEz92ZqQ87?ref_src=twsrc%5Etfw">Tweets by VbPgFtEz92ZqQ87</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+
+    <div class="sns-box">
+      <h3 class="sub-title">Youtube</h3>
+      <hr>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/TRmI0YiIKPw?start=3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+  <!--wrapper-->
+</section>

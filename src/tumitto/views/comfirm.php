@@ -30,12 +30,12 @@
     </div>
     <div class="container" style="display: flex;">
     <form action="contact.php" method="post" class="confirm item">
-      <button type="submit" class="btn btn-secondary" style="margin-right: 10px;">戻る</button>
+      <button type="submit" class="btn btn-secondary" style="margin-right: px;">戻る</button>
     </form>
     <form action="complete.php" method="post" class="confirm item">
       <!-- 完了ページへ渡すトークンの隠しフィールド -->
       <input type="hidden" name="ticket" value="<?php echo h($ticket); ?>">
-      <button type="submit" class="btn btn-success" style="margin-left: 10px;">送信する</button>
+      <button type="submit" class="btn btn-success" >送信する</button>
     </form>
     </div>
   </div>

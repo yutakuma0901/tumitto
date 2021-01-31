@@ -3,18 +3,18 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="stylesheets/css/app.css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title><?php echo $title; ?></title>
-</head>
-
-<body class="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <!-- Optional JavaScript -->
   <!-- jQuery first, Popper.js, Bootstrap JSの順番に読み込む -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="stylesheets/css/app.css">
+  <title><?php echo $title; ?></title>
+</head>
+
+<body class="">
 
   <!-- ナビゲーションメニュー -->
   <nav class="navbar navbar-expand-lg navbar-light bg-dark " style=" vertical-align: middle;">
@@ -41,6 +41,7 @@
     <?php include $content; ?>
   </div>
 </body>
+
 <footer class="text-center ">
   <div style="margin-top: 74px;">
     <div class="container text-center mt-5 mb-5" style="font-size:x-small;">
