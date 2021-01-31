@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="stylesheets/css/app.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title><?php echo $title; ?></title>
 </head>
 
@@ -24,11 +25,10 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ">
         <a class="nav-link text-light" href="home.index.php">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-link text-light" href="logout.php">Logout</a>
-        <a class="nav-link text-light" href="#skill">Skill</a>
-        <a class="nav-link text-light" href="#works">Works</a>
-        <a class="nav-link text-light" href="#contact">Contact</a>
+        <a class="nav-link text-light" href="index.php">Mypage</a>
+        <a class="nav-link text-light" href="contact.php">Contact</a>
         <a class="nav-link text-light" href="https://keizoku-supporter.xyz/">blog</a>
+        <a class="nav-link text-light" href="logout.php">Logout</a>
       </div>
     </div>
   </nav>
